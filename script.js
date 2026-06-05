@@ -1,15 +1,24 @@
-const swiper = new Swiper(".diarySwiper", {
-  speed: 500,
+const swiper = new Swiper('.diarySwiper', {
+  speed: 450,
   grabCursor: true,
-  centeredSlides: true,
+  centeredSlides: false,
+  spaceBetween: 0,
+  resistanceRatio: 0.6,
 });
 
-const counter = document.querySelector(".page-counter");
-const slides = document.querySelectorAll(".swiper-slide");
+const totalSlides =
+  document.querySelectorAll('.swiper-slide').length;
 
-counter.textContent = `1 / ${slides.length}`;
+const counter =
+  document.querySelector('.counter');
 
-swiper.on("slideChange", () => {
+function updateCounter() {
   counter.textContent =
-    `${swiper.activeIndex + 1} / ${slides.length}`;
+    `${swiper.activeIndex + 1} / ${totalSlides}`;
+}
+
+updateCounter();
+
+swiper.on('slideChange', () => {
+  updateCounter();
 });
