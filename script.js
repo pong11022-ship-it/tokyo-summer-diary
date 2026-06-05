@@ -1,24 +1,51 @@
-const swiper = new Swiper('.diarySwiper', {
-  speed: 450,
+const swiper = new Swiper(".diarySwiper", {
+
+  direction: "horizontal",
+
+  slidesPerView: 1,
+
+  speed: 650,
+
   grabCursor: true,
-  centeredSlides: false,
-  spaceBetween: 0,
-  resistanceRatio: 0.6,
+
+  resistanceRatio: 0.7,
+
+  longSwipes: true,
+
+  longSwipesRatio: 0.2,
+
+  touchRatio: 1.2,
+
+  watchSlidesProgress: true,
+
+  effect: "slide",
+
 });
 
-const totalSlides =
-  document.querySelectorAll('.swiper-slide').length;
+const slides =
+document.querySelectorAll(".swiper-slide");
 
 const counter =
-  document.querySelector('.counter');
+document.querySelector(".counter");
 
 function updateCounter() {
+
+  const current =
+    String(swiper.activeIndex + 1)
+    .padStart(2, "0");
+
+  const total =
+    String(slides.length)
+    .padStart(2, "0");
+
   counter.textContent =
-    `${swiper.activeIndex + 1} / ${totalSlides}`;
+    `${current} / ${total}`;
 }
 
 updateCounter();
 
-swiper.on('slideChange', () => {
+swiper.on("slideChange", () => {
+
   updateCounter();
+
 });
