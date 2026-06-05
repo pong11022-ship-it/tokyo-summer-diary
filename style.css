@@ -384,3 +384,21 @@ body{
     font-size:2rem;
   }
 }
+/* 현재 페이지 강조 */
+
+.swiper-slide{
+
+  transition:
+  transform .35s ease,
+  opacity .35s ease;
+}
+
+.swiper-slide:not(.swiper-slide-active){
+
+  opacity:.85;
+}
+
+.swiper-slide-active{
+
+  opacity:1;
+}
