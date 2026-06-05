@@ -1,12 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-body{font-family:Pretendard,sans-serif;background:#f8f5ec;padding:24px;color:#3f3f46;
-background-image:radial-gradient(#f3ccd7 2px,transparent 2px),radial-gradient(#dcefdc 2px,transparent 2px);
-background-size:70px 70px;background-position:0 0,35px 35px}
-.cover,.page,.hero{max-width:720px;margin:0 auto 24px;background:#fffdf9;border-radius:28px;padding:28px;box-shadow:0 8px 24px rgba(0,0,0,.05)}
-.cover{text-align:center;padding:60px 24px;position:relative}.clip{position:absolute;top:-12px;left:50%;transform:translateX(-50%)}
-h1{font-size:2.8rem}.date{display:inline-block;background:#f8dbe4;padding:10px 18px;border-radius:999px}
-.icons{color:#777}h3{color:#888;letter-spacing:2px}ul{list-style:none;padding:0;line-height:2}.memo{margin-top:10px;border-top:1px dashed #ddd;padding-top:10px}
-.hero{text-align:center;padding:60px 24px}.disney{background:#eaf4ff}.hanabi{background:linear-gradient(#fff6d5,#fffdf6)}
-.tag{display:inline-block;background:#fff;padding:8px 14px;border-radius:999px;margin-bottom:10px}
-.lines{height:260px;border-radius:16px;background:repeating-linear-gradient(to bottom,#fff 0,#fff 34px,#e5e7eb 35px)}
+:root{
+  --bg:#f3f2d8;
+
+  --pink:#f8d4df;
+  --green:#dff2d8;
+  --yellow:#fff0ad;
+  --purple:#eee6ff;
+
+  --blue:#dbefff;
+  --mint:#ddf8ea;
+  --lavender:#efe8ff;
+  --ocean:#e3f6ff;
+
+  --paper:#fffdf8;
+  --line:#8a8a8a;
+
+  --shadow:
+  0 8px 20px rgba(0,0,0,.08);
+
+  --radius:28px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,
+body{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+
+  font-family:
+  'DotGothic16',
+  sans-serif;
+
+  background:var(--bg);
+}
+
+/* =======================
+   SLIDER
+======================= */
+
+.slider{
+  display:flex;
+
+  width:100%;
+  height:100vh;
+
+  overflow-x:auto;
+  overflow-y:hidden;
+
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+
+  -webkit-overflow-scrolling:touch;
+
+  scrollbar-width:none;
+}
+
+.slider::-webkit-scrollbar{
+  display:none;
+}
+
+/* =======================
+   PAGE
+======================= */
+
+.page{
+  min-width:100vw;
+  height:100vh;
+
+  padding:24px;
+
+  scroll-snap-align:start;
+
+  position:relative;
+
+  background:
+  radial-gradient(
+    circle at 20% 20%,
+    rgba(255,255,255,.35) 2px,
+    transparent 2px
+  );
+
+  background-size:28px 28px;
+}
+
+.cover,
+.about,
+.special{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+/* =======================
+   COLORS
+======================= */
+
+.pink{
+  background-color:var(--pink);
+}
+
+.green{
+  background-color:var(--green);
+}
+
+.yellow{
+  background-color:var(--yellow);
+}
+
+.purple{
+  background-color:var(--purple);
+}
+
+.blue{
+  background-color:var(--blue);
+}
+
+.mint{
+  background-color:var(--mint);
+}
+
+.lavender{
+  background-color:var(--lavender);
+}
+
+.ocean{
+  background-color:var(--ocean);
+}
+
+.goodbye{
+  background-color:#fff8eb;
+}
+
+.memories{
+  background-color:#fffdf5;
+}
+
+.cover{
+  background:
+  linear-gradient(
+    180deg,
+    #fffef7,
+    #fff8ef
+  );
+}
+
+/* =======================
+   COVER
+======================= */
+
+.cover-inner{
+  text-align:center;
+}
+
+.cover h1{
+  font-size:58px;
+  line-height:1.05;
+
+  color:#666;
+
+  margin-bottom:28px;
+}
+
+.date-badge{
+  display:inline-block;
+
+  background:white;
+
+  border:2px solid #666;
+
+  border-radius:999px;
+
+  padding:12px 20px;
+
+  color:#666;
+}
+
+.icons{
+  margin-top:24px;
+
+  font-size:20px;
+}
+
+.swipe-guide{
+  margin-top:28px;
+
+  color:#888;
+
+  font-size:14px;
+}
+
+.tape{
+  width:120px;
+  height:28px;
+
+  background:#ffe3ea;
+
+  border-radius:6px;
+
+  position:absolute;
+
+  top:18px;
+  left:50%;
+
+  transform:
+  translateX(-50%)
+  rotate(-2deg);
+
+  opacity:.9;
+}
+
+/* =======================
+   PAGE NUMBER
+======================= */
+
+.page-number{
+  position:absolute;
+
+  top:18px;
+  right:20px;
+
+  font-size:12px;
+
+  color:#777;
+}
+
+/* =======================
+   NOTE
+======================= */
+
+.note-box{
+  width:min(90%,420px);
+
+  background:white;
+
+  border:2px solid #777;
+
+  border-radius:18px;
+
+  padding:28px;
+
+  box-shadow:var(--shadow);
+}
+
+.note-box h2{
+  font-size:24px;
+
+  color:#666;
+
+  margin-bottom:20px;
+}
+
+.keyword-list{
+  list-style:none;
+
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+
+  color:#666;
+}
+
+/* =======================
+   DAY
+======================= */
+
+.day-header{
+  display:flex;
+
+  align-items:center;
+  justify-content:space-between;
+
+  margin-top:28px;
+}
+
+.day-label{
+  color:#666;
+
+  font-size:14px;
+}
+
+.day-icon{
+  font-size:26px;
+}
+
+.place-title{
+  margin-top:16px;
+  margin-bottom:20px;
+
+  font-size:34px;
+
+  color:#555;
+}
+
+.check-list{
+  list-style:none;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:10px;
+
+  color:#555;
+}
+
+.check-list.center{
+  align-items:center;
+}
+
+/* =======================
+   POLAROID
+======================= */
+
+.photo-wrap{
+  display:flex;
+
+  gap:16px;
+
+  margin-top:28px;
+
+  flex-wrap:wrap;
+}
+
+.polaroid{
+  width:140px;
+  height:170px;
+
+  background:white;
+
+  border-radius:8px;
+
+  box-shadow:var(--shadow);
+
+  padding-bottom:18px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:#bbb;
+
+  transform:rotate(-2deg);
+}
+
+.polaroid:nth-child(2){
+  transform:rotate(2deg);
+}
+
+.polaroid.large{
+  width:160px;
+  height:200px;
+}
+
+/* =======================
+   MEMO
+======================= */
+
+.memo-box{
+  margin-top:24px;
+
+  background:white;
+
+  border-radius:18px;
+
+  padding:18px;
+
+  box-shadow:var(--shadow);
+}
+
+.memo-title{
+  color:#666;
+
+  margin-bottom:12px;
+}
+
+.memo-lines{
+  height:120px;
+
+  background:
+  repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 30px,
+    #d9d9d9 31px
+  );
+}
+
+.large-lines{
+  height:220px;
+}
+
+/* =======================
+   SPECIAL PAGE
+======================= */
+
+.special-inner{
+  text-align:center;
+}
+
+.big-icon{
+  font-size:60px;
+
+  margin-bottom:20px;
+}
+
+.special-title{
+  font-size:40px;
+
+  line-height:1.2;
+
+  color:#666;
+
+  margin-bottom:20px;
+}
+
+.sticker-corner{
+  position:absolute;
+
+  top:20px;
+  left:20px;
+
+  font-size:18px;
+}
+
+/* =======================
+   MOBILE
+======================= */
+
+@media (max-width:768px){
+
+  .cover h1{
+    font-size:46px;
+  }
+
+  .place-title{
+    font-size:28px;
+  }
+
+  .special-title{
+    font-size:32px;
+  }
+
+  .photo-wrap{
+    justify-content:center;
+  }
+
+}
