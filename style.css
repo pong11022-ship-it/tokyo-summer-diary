@@ -1,0 +1,30 @@
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+body{
+font-family:Pretendard,sans-serif;
+background:#f8f5ec;
+background-image:
+radial-gradient(#f3ccd7 2px,transparent 2px),
+radial-gradient(#dcefdc 2px,transparent 2px);
+background-size:70px 70px;
+background-position:0 0,35px 35px;
+padding:24px;color:#3f3f46;
+}
+.cover,.page,.hero{
+max-width:720px;margin:0 auto 24px;
+background:#fffdf9;border-radius:28px;
+padding:28px;box-shadow:0 8px 24px rgba(0,0,0,.05);
+}
+.cover{text-align:center;padding:60px 24px;position:relative}
+.clip{position:absolute;top:-12px;left:50%;transform:translateX(-50%)}
+.cover h1{font-size:2.8rem;margin:0}
+.date{display:inline-block;background:#f8dbe4;padding:10px 18px;border-radius:999px}
+.icons{color:#777}
+h3{color:#888;letter-spacing:2px}
+ul{list-style:none;padding:0;line-height:2}
+.memo{margin-top:16px;padding-top:12px;border-top:1px dashed #ddd}
+.hero{text-align:center;padding:70px 24px}
+.disney{background:#eaf4ff}
+.hanabi{background:linear-gradient(#fff6d5,#fffdf6)}
+.tag{display:inline-block;background:white;padding:8px 14px;border-radius:999px}
+.lines{height:240px;border-radius:16px;background:repeating-linear-gradient(to bottom,#fff 0,#fff 34px,#e5e7eb 35px)}
