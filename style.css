@@ -347,3 +347,43 @@ body{
     font-size:1.5rem;
   }
 }
+/* PAGE NUMBER */
+
+.page-counter{
+
+  position:fixed;
+
+  bottom:24px;
+  left:50%;
+
+  transform:
+  translateX(-50%);
+
+  background:
+  rgba(255,255,255,.9);
+
+  border-radius:999px;
+
+  padding:
+  10px 16px;
+
+  font-size:.75rem;
+
+  z-index:1000;
+
+  box-shadow:
+  0 4px 12px rgba(0,0,0,.06);
+}
+.swiper-slide{
+
+  transition:
+  transform .3s ease,
+  opacity .3s ease;
+}
+
+.swiper-slide:not(.swiper-slide-active){
+
+  opacity:.55;
+
+  transform:scale(.95);
+}
