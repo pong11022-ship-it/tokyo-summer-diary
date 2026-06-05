@@ -1,0 +1,17 @@
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+body{font-family:Pretendard,sans-serif;background:#faf7ef;margin:0;padding:20px;color:#444}
+.hero,.day,.feature,.memory{background:#fff;border-radius:30px;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.hero{text-align:center;padding:90px 20px;position:relative}
+.hero h1{font-size:4rem;line-height:1;margin:0}
+.tape{position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:120px;height:26px;background:#ffdfe8}
+.days{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:24px}
+.day{padding:22px}
+.pink{background:#fff7fa}.mint{background:#f7fff7}.yellow{background:#fffef1}.purple{background:#faf7ff}.blue{background:#f5faff}.peach{background:#fff5ef}.gold{background:#fff8dd}
+.feature{margin-top:24px;padding:60px 30px;text-align:center}
+.disney{background:#eaf5ff}
+.hanabi{background:linear-gradient(#fff4c8,#fffdf5)}
+.memory{margin-top:24px;padding:30px}
+.paper{height:260px;border-radius:20px;background:repeating-linear-gradient(#fff 0,#fff 34px,#ececec 35px)}
+.floating{position:fixed;font-size:2rem;opacity:.6}
+.f1{top:40px;left:20px}.f2{top:100px;right:20px}.f3{bottom:30px;left:30px}
