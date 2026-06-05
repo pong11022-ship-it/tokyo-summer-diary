@@ -1,0 +1,19 @@
+
+body{margin:0;overflow:hidden;background:#f8f6eb;font-family:system-ui}
+.bg{position:fixed;inset:0;background:radial-gradient(#f4d5e0 2px,transparent 2px),radial-gradient(#dff2df 2px,transparent 2px);background-size:72px 72px;background-position:0 0,36px 36px}
+.swiper,.swiper-slide{width:100%;height:100vh}
+.swiper-slide{display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box}
+.paper{width:min(420px,90vw);height:min(780px,86vh);background:#fffdf8;border-radius:34px;padding:28px;box-sizing:border-box;box-shadow:0 15px 40px rgba(0,0,0,.06)}
+.cover,.special{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+h1,h2,.day,.sticker{font-family:'DotGothic16',sans-serif}
+h1{font-size:56px;line-height:1.1}
+.pill{margin-top:18px;background:#fff;padding:14px 22px;border-radius:999px;border:1px solid #eee}
+.sticker{width:72px;height:72px;background:#f4dce6;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px}
+.day{margin-top:16px;color:#777}
+h2{font-size:42px}
+ul{list-style:none;padding:0;line-height:2.2;font-size:24px}
+.box{display:inline-block;width:18px;height:18px;border:2px solid #888;margin-right:10px}
+.speech{display:inline-block;background:#f3f4f6;padding:14px 18px;border-radius:18px}
+.memo{margin-top:20px;height:180px;background:repeating-linear-gradient(to bottom,transparent,transparent 31px,#ddd 32px)}
+.counter{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#fff;padding:12px 18px;border-radius:999px}
+.tape{position:fixed;top:110px;left:50%;transform:translateX(-50%);width:90px;height:24px;background:rgba(255,220,220,.5);border-radius:6px}
