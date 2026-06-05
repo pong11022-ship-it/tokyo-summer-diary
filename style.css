@@ -453,3 +453,18 @@ body{
   }
 
 }
+.sparkles{
+  font-size:20px;
+  letter-spacing:8px;
+  margin-bottom:20px;
+  opacity:.7;
+}
+
+.icons{
+  line-height:2;
+}
+
+.memo-title{
+  font-size:14px;
+  color:#666;
+}
