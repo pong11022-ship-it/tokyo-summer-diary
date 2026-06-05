@@ -1,139 +1,54 @@
-// ========================================
-// TOKYO SUMMER DIARY
-// script.js
-// ========================================
+/* ======================
+   TOKYO SUMMER DIARY
+====================== */
 
-// 현재 페이지 표시용
-const slider = document.querySelector('.slider');
+const swiper = new Swiper(".diarySwiper", {
 
-const pages = document.querySelectorAll('.page');
+  direction: "horizontal",
 
-let currentPage = 0;
+  slidesPerView: 1,
 
-// ----------------------------------------
-// 페이지 인디케이터 생성
-// ----------------------------------------
+  spaceBetween: 24,
 
-const indicator = document.createElement('div');
-indicator.className = 'page-indicator';
+  speed: 500,
 
-pages.forEach((_, index) => {
+  centeredSlides: true,
 
-  const dot = document.createElement('div');
+  grabCursor: true,
 
-  dot.className = 'dot';
+  resistanceRatio: 0.6,
 
-  if(index === 0){
-    dot.classList.add('active');
-  }
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 
-  indicator.appendChild(dot);
+  keyboard: {
+    enabled: true,
+  },
+
+  mousewheel: false,
 
 });
 
-document.body.appendChild(indicator);
+/* PAGE COUNTER */
 
-const dots = document.querySelectorAll('.dot');
+const slides =
+document.querySelectorAll(".swiper-slide");
 
-// ----------------------------------------
-// 현재 페이지 감지
-// ----------------------------------------
+const counter =
+document.querySelector(".page-counter");
 
-function updateIndicator(){
+if(counter){
 
-  const pageWidth = window.innerWidth;
+  counter.innerText =
+  `1 / ${slides.length}`;
 
-  currentPage = Math.round(
-    slider.scrollLeft / pageWidth
-  );
+  swiper.on("slideChange", () => {
 
-  dots.forEach(dot =>
-    dot.classList.remove('active')
-  );
+    counter.innerText =
+    `${swiper.activeIndex + 1} / ${slides.length}`;
 
-  if(dots[currentPage]){
-    dots[currentPage].classList.add('active');
-  }
+  });
 
 }
-
-slider.addEventListener(
-  'scroll',
-  updateIndicator
-);
-
-// ----------------------------------------
-// 첫 로드 애니메이션
-// ----------------------------------------
-
-window.addEventListener('load', () => {
-
-  document.body.classList.add('loaded');
-
-});
-
-// ----------------------------------------
-// 폴라로이드 클릭 효과
-// ----------------------------------------
-
-const photos = document.querySelectorAll('.polaroid');
-
-photos.forEach(photo => {
-
-  photo.addEventListener('click', () => {
-
-    photo.classList.toggle('selected');
-
-  });
-
-});
-
-// ----------------------------------------
-// 모바일 진동 (지원 기기)
-// ----------------------------------------
-
-photos.forEach(photo => {
-
-  photo.addEventListener('touchstart', () => {
-
-    if(navigator.vibrate){
-
-      navigator.vibrate(15);
-
-    }
-
-  });
-
-});
-
-// ----------------------------------------
-// 키보드 좌우 이동
-// ----------------------------------------
-
-document.addEventListener('keydown', (e) => {
-
-  const width = window.innerWidth;
-
-  if(e.key === 'ArrowRight'){
-
-    slider.scrollBy({
-      left: width,
-      behavior: 'smooth'
-    });
-
-  }
-
-  if(e.key === 'ArrowLeft'){
-
-    slider.scrollBy({
-      left: -width,
-      behavior: 'smooth'
-    });
-
-  }
-
-});
-
-// ----------------------------------------
-// 끝!
-// ----------------------------------------
