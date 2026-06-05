@@ -1,40 +1,665 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tokyo Summer Diary</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tokyo Summer Diary</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-<section class="cover">
-<div class="clip">📎</div>
-<h1>Tokyo Summer Diary</h1>
-<p class="date">07.17 → 07.26</p>
-<p class="icons">☁️ 🍒 📖</p>
-</section>
+<div class="slider">
 
-<section class="page"><h3>DAY 01 🎧</h3><h2>아키하바라</h2><ul><li>☐ 도쿄 도착</li><li>☐ VIA INN 체크인</li><li>☐ 히지리바시</li><li>☐ 간다강 산책</li><li>☐ Emu</li><li>☐ Jazz Spot Intro</li><li>☐ 아키하바라 야경</li><li>☐ 편의점 탐방</li></ul><div class="memo">✎ Memo</div></section>
+  <!-- COVER -->
 
-<section class="page"><h3>DAY 02 🌳</h3><h2>신주쿠 · 요요기</h2><ul><li>☐ 신주쿠 교엔</li><li>☐ 요요기 공원</li><li>☐ 하라주쿠 뒷골목</li><li>☐ Dug Jazz Cafe & Bar</li></ul><div class="memo">✎ Memo</div></section>
+  <section class="page cover">
 
-<section class="page"><h3>DAY 03 ☕</h3><h2>시부야 · 다이칸야마</h2><ul><li>☐ 시부야</li><li>☐ 다이칸야마 T-SITE</li><li>☐ 나카메구로 산책</li><li>☐ 빈티지샵</li><li>☐ Kissa Kion</li></ul><div class="memo">✎ Memo</div></section>
+    <div class="tape"></div>
 
-<section class="page"><h3>DAY 04 📚</h3><h2>책방 데이</h2><ul><li>☐ 진보초</li><li>☐ 긴자 이토야</li><li>☐ 마루젠</li><li>☐ 카페</li></ul><div class="memo">✎ Memo</div></section>
+    <div class="cover-inner">
 
-<section class="hero disney"><div class="tag">THE HAPPIEST DAY</div><h2>💙 DisneySea</h2><p>07.21</p></section>
+      <div class="sticker">☁️ 🍒 📖</div>
 
-<section class="page"><h3>DAY 06 🐠</h3><h2>선샤인 수족관</h2><ul><li>☐ 선샤인 수족관</li><li>☐ 선샤인시티</li><li>☐ 이케부쿠로</li></ul><div class="memo">✎ Memo</div></section>
+      <h1>
+        TOKYO<br>
+        SUMMER<br>
+        DIARY
+      </h1>
 
-<section class="page"><h3>DAY 07 🖼</h3><h2>네즈미술관</h2><ul><li>☐ 네즈미술관</li><li>☐ 아오야마</li><li>☐ Spiral</li><li>☐ 카페 네구라</li></ul><div class="memo">✎ Memo</div></section>
+      <div class="date-badge">
+        07.17 → 07.26
+      </div>
 
-<section class="page"><h3>DAY 08 🌊</h3><h2>가마쿠라 · 에노시마</h2><ul><li>☐ 호코쿠지 대나무숲</li><li>☐ 고마치도리</li><li>☐ 가마쿠라역 주변</li><li>☐ 가마쿠라코코마에</li><li>☐ 에노시마</li></ul><div class="memo">✎ Memo</div></section>
+      <p class="swipe-guide">
+        swipe →
+      </p>
 
-<section class="hero hanabi"><div class="tag">SUMMER HIGHLIGHT</div><h2>🎆 스미다가와 하나비</h2><ul><li>☐ 아사쿠사</li><li>☐ 센소지</li><li>☐ 스카이트리</li><li>☐ 카페</li><li>☐ 유카타 착용</li><li>☐ 스미다가와 하나비</li></ul></section>
+    </div>
 
-<section class="page"><h3>DAY 10 ✈️</h3><h2>Goodbye Tokyo</h2><ul><li>☐ 도쿄역</li><li>☐ 기념품 쇼핑</li><li>☐ 공항 이동</li></ul></section>
+  </section>
 
-<section class="page"><h2>My Tokyo Memories</h2><div class="lines"></div></section>
+  <!-- ABOUT -->
 
-</body></html>
+  <section class="page about">
+
+    <div class="page-number">
+      01 / 12
+    </div>
+
+    <div class="note-box">
+
+      <h2>ABOUT THIS TRIP</h2>
+
+      <ul class="keyword-list">
+        <li>☕ Jazz</li>
+        <li>📚 Bookstore</li>
+        <li>🖼 Museum</li>
+        <li>🌊 Ocean</li>
+        <li>🎆 Hanabi</li>
+      </ul>
+
+    </div>
+
+  </section>
+
+  <!-- DAY 01 -->
+
+  <section class="page day pink">
+
+    <div class="page-number">
+      02 / 12
+    </div>
+
+    <div class="day-header">
+
+      <span class="day-label">
+        DAY 01
+      </span>
+
+      <span class="day-icon">
+        🎧
+      </span>
+
+    </div>
+
+    <h2 class="place-title">
+      아키하바라
+    </h2>
+
+    <ul class="check-list">
+
+      <li>☐ 도쿄 도착</li>
+      <li>☐ VIA INN 체크인</li>
+      <li>☐ 히지리바시</li>
+      <li>☐ 간다강 산책</li>
+      <li>☐ Emu</li>
+      <li>☐ Jazz Spot Intro</li>
+      <li>☐ 아키하바라 야경</li>
+      <li>☐ 편의점 탐방</li>
+
+    </ul>
+
+    <div class="photo-wrap">
+
+      <div class="polaroid">
+        PHOTO
+      </div>
+
+      <div class="polaroid">
+        PHOTO
+      </div>
+
+    </div>
+
+    <div class="memo-box">
+
+      <div class="memo-title">
+        ✎ Memo
+      </div>
+
+      <div class="memo-lines"></div>
+
+    </div>
+
+  </section>
+
+  <!-- DAY 02 -->
+
+  <section class="page day green">
+
+    <div class="page-number">
+      03 / 12
+    </div>
+
+    <div class="day-header">
+
+      <span class="day-label">
+        DAY 02
+      </span>
+
+      <span class="day-icon">
+        🌳
+      </span>
+
+    </div>
+
+    <h2 class="place-title">
+      신주쿠 · 요요기
+    </h2>
+
+    <ul class="check-list">
+
+      <li>☐ 신주쿠 교엔</li>
+      <li>☐ 요요기 공원</li>
+      <li>☐ 하라주쿠 뒷골목</li>
+      <li>☐ Dug Jazz Cafe & Bar</li>
+
+    </ul>
+
+    <div class="photo-wrap">
+
+      <div class="polaroid">
+        PHOTO
+      </div>
+
+      <div class="polaroid">
+        PHOTO
+      </div>
+
+    </div>
+
+    <div class="memo-box">
+
+      <div class="memo-title">
+        ✎ Memo
+      </div>
+
+      <div class="memo-lines"></div>
+
+    </div>
+
+  </section>
+    <!-- DAY 03 -->
+
+  <section class="page day yellow">
+
+    <div class="page-number">
+      04 / 12
+    </div>
+
+    <div class="day-header">
+
+      <span class="day-label">
+        DAY 03
+      </span>
+
+      <span class="day-icon">
+        ☕
+      </span>
+
+    </div>
+
+    <h2 class="place-title">
+      시부야 · 다이칸야마
+    </h2>
+
+    <ul class="check-list">
+
+      <li>☐ 시부야</li>
+      <li>☐ 다이칸야마 T-SITE</li>
+      <li>☐ 나카메구로 산책</li>
+      <li>☐ 빈티지샵</li>
+      <li>☐ Kissa Kion</li>
+
+    </ul>
+
+    <div class="photo-wrap">
+
+      <div class="polaroid">
+        PHOTO
+      </div>
+
+      <div class="polaroid">
+        PHOTO
+      </div>
+
+    </div>
+
+    <div class="memo-box">
+
+      <div class="memo-title">
+        ✎ Memo
+      </div>
+
+      <div class="memo-lines"></div>
+
+    </div>
+
+  </section>
+
+  <!-- DAY 04 -->
+
+  <section class="page day purple">
+
+    <div class="page-number">
+      05 / 12
+    </div>
+
+    <div class="day-header">
+
+      <span class="day-label">
+        DAY 04
+      </span>
+
+      <span class="day-icon">
+        📚
+      </span>
+
+    </div>
+
+    <h2 class="place-title">
+      책방 데이
+    </h2>
+
+    <ul class="check-list">
+
+      <li>☐ 진보초</li>
+      <li>☐ 긴자 이토야</li>
+      <li>☐ 마루젠</li>
+      <li>☐ 카페</li>
+
+    </ul>
+
+    <div class="photo-wrap">
+
+      <div class="polaroid">
+        PHOTO
+      </div>
+
+      <div class="polaroid">
+        PHOTO
+      </div>
+
+    </div>
+
+    <div class="memo-box">
+
+      <div class="memo-title">
+        ✎ Memo
+      </div>
+
+      <div class="memo-lines"></div>
+
+    </div>
+
+  </section>
+
+  <!-- DISNEYSEA -->
+
+  <section class="page special disney">
+
+    <div class="page-number">
+      06 / 12
+    </div>
+
+    <div class="sticker-corner">
+      ⭐ ⭐ ⭐
+    </div>
+
+    <div class="special-inner">
+
+      <div class="big-icon">
+        💙
+      </div>
+
+      <h2 class="special-title">
+        DISNEYSEA
+      </h2>
+
+      <div class="date-badge">
+        07.21
+      </div>
+
+      <div class="photo-wrap">
+
+        <div class="polaroid large">
+          PHOTO
+        </div>
+
+        <div class="polaroid large">
+          PHOTO
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- DAY 06 -->
+
+  <section class="page day mint">
+
+    <div class="page-number">
+      07 / 12
+    </div>
+
+    <div class="day-header">
+
+      <span class="day-label">
+        DAY 06
+      </span>
+
+      <span class="day-icon">
+        🐠
+      </span>
+
+    </div>
+
+    <h2 class="place-title">
+      선샤인 수족관
+    </h2>
+
+    <ul class="check-list">
+
+      <li>☐ 선샤인 수족관</li>
+      <li>☐ 선샤인시티</li>
+      <li>☐ 이케부쿠로</li>
+
+    </ul>
+
+    <div class="photo-wrap">
+
+      <div class="polaroid">
+        PHOTO
+      </div>
+
+      <div class="polaroid">
+        PHOTO
+      </div>
+
+    </div>
+
+    <div class="memo-box">
+
+      <div class="memo-title">
+        ✎ Memo
+      </div>
+
+      <div class="memo-lines"></div>
+
+    </div>
+
+  </section>
+
+  <!-- DAY 07 -->
+
+  <section class="page day lavender">
+
+    <div class="page-number">
+      08 / 12
+    </div>
+
+    <div class="day-header">
+
+      <span class="day-label">
+        DAY 07
+      </span>
+
+      <span class="day-icon">
+        🖼
+      </span>
+
+    </div>
+
+    <h2 class="place-title">
+      네즈미술관
+    </h2>
+
+    <ul class="check-list">
+
+      <li>☐ 네즈미술관</li>
+      <li>☐ 아오야마</li>
+      <li>☐ Spiral</li>
+      <li>☐ 카페 네구라</li>
+
+    </ul>
+
+    <div class="photo-wrap">
+
+      <div class="polaroid">
+        PHOTO
+      </div>
+
+      <div class="polaroid">
+        PHOTO
+      </div>
+
+    </div>
+
+    <div class="memo-box">
+
+      <div class="memo-title">
+        ✎ Memo
+      </div>
+
+      <div class="memo-lines"></div>
+
+    </div>
+
+  </section>
+    <!-- DAY 08 -->
+
+  <section class="page day ocean">
+
+    <div class="page-number">
+      09 / 12
+    </div>
+
+    <div class="day-header">
+
+      <span class="day-label">
+        DAY 08
+      </span>
+
+      <span class="day-icon">
+        🌊
+      </span>
+
+    </div>
+
+    <h2 class="place-title">
+      가마쿠라 · 에노시마
+    </h2>
+
+    <ul class="check-list">
+
+      <li>☐ 호코쿠지 대나무숲</li>
+      <li>☐ 고마치도리</li>
+      <li>☐ 가마쿠라역 주변</li>
+      <li>☐ 가마쿠라코코마에</li>
+      <li>☐ 에노시마</li>
+
+    </ul>
+
+    <div class="photo-wrap">
+
+      <div class="polaroid">
+        PHOTO
+      </div>
+
+      <div class="polaroid">
+        PHOTO
+      </div>
+
+    </div>
+
+    <div class="memo-box">
+
+      <div class="memo-title">
+        ✎ Memo
+      </div>
+
+      <div class="memo-lines"></div>
+
+    </div>
+
+  </section>
+
+  <!-- HANABI -->
+
+  <section class="page special hanabi">
+
+    <div class="page-number">
+      10 / 12
+    </div>
+
+    <div class="special-inner">
+
+      <div class="big-icon">
+        🎆
+      </div>
+
+      <h2 class="special-title">
+        SUMIDAGAWA<br>
+        HANABI
+      </h2>
+
+      <div class="date-badge">
+        07.25
+      </div>
+
+      <ul class="check-list center">
+
+        <li>☐ 아사쿠사</li>
+        <li>☐ 센소지</li>
+        <li>☐ 스카이트리</li>
+        <li>☐ 카페</li>
+        <li>☐ 유카타 착용</li>
+        <li>☐ 스미다가와 하나비</li>
+
+      </ul>
+
+      <div class="photo-wrap">
+
+        <div class="polaroid large">
+          PHOTO
+        </div>
+
+        <div class="polaroid large">
+          PHOTO
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- DAY 10 -->
+
+  <section class="page day goodbye">
+
+    <div class="page-number">
+      11 / 12
+    </div>
+
+    <div class="day-header">
+
+      <span class="day-label">
+        DAY 10
+      </span>
+
+      <span class="day-icon">
+        ✈️
+      </span>
+
+    </div>
+
+    <h2 class="place-title">
+      Goodbye Tokyo
+    </h2>
+
+    <ul class="check-list">
+
+      <li>☐ 도쿄역</li>
+      <li>☐ 기념품 쇼핑</li>
+      <li>☐ 공항 이동</li>
+
+    </ul>
+
+    <div class="photo-wrap">
+
+      <div class="polaroid">
+        PHOTO
+      </div>
+
+      <div class="polaroid">
+        PHOTO
+      </div>
+
+    </div>
+
+    <div class="memo-box">
+
+      <div class="memo-title">
+        ✎ Memo
+      </div>
+
+      <div class="memo-lines"></div>
+
+    </div>
+
+  </section>
+
+  <!-- MEMORIES -->
+
+  <section class="page memories">
+
+    <div class="page-number">
+      12 / 12
+    </div>
+
+    <h2 class="special-title">
+      TOKYO MEMORIES
+    </h2>
+
+    <div class="photo-wrap">
+
+      <div class="polaroid large">
+        PHOTO
+      </div>
+
+      <div class="polaroid large">
+        PHOTO
+      </div>
+
+    </div>
+
+    <div class="memo-box memories-box">
+
+      <div class="memo-title">
+        ✎ My Tokyo Memories
+      </div>
+
+      <div class="memo-lines large-lines"></div>
+
+    </div>
+
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
