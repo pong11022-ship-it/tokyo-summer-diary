@@ -1,0 +1,16 @@
+body{margin:0;font-family:'DotGothic16',sans-serif;background:#f5f3df;overflow:hidden}
+.background-dots{position:fixed;inset:0;background:
+radial-gradient(#f8d7e1 2px,transparent 2px),
+radial-gradient(#dff1d8 2px,transparent 2px);
+background-size:70px 70px;background-position:0 0,35px 35px}
+.swiper,.swiper-slide{width:100%;height:100vh}
+.swiper-slide{display:flex;flex-direction:column;justify-content:center;padding:32px;box-sizing:border-box}
+.cover{text-align:center}
+.page h2,.disney h2,.hanabi h2{font-size:2rem}
+.pink{background:#f8d7e1}.mint{background:#dff1d8}
+.disney{background:#dbefff}.hanabi{background:#fff0b0}
+.day{opacity:.7;margin-bottom:12px}
+ul{list-style:none;padding:0;line-height:2}
+.bubble{background:#fff;padding:10px 14px;border-radius:999px;display:inline-block;margin:12px 0}
+.memo{margin-top:20px;border:2px dashed rgba(0,0,0,.15);padding:20px;border-radius:18px;min-height:120px}
+.page-counter{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#fff;padding:10px 16px;border-radius:999px}
