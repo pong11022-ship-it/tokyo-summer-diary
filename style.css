@@ -387,3 +387,27 @@ body{
 
   transform:scale(.95);
 }
+@media (max-width: 768px){
+
+  .day-layout{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .memo-box{
+    width:100%;
+    min-height:120px;
+  }
+
+  .day-title{
+    font-size:2rem;
+    line-height:1.3;
+    word-break:keep-all;
+  }
+
+}
+
+.day-title{
+  word-break:keep-all;
+}
